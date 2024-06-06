@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <title>Air Quality Monitoring</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="heading">Air Pollution Indicator</h1>
+        <div class="location-container">
+            <h2 class="sub-heading">Your location</h2>
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text" class="loc-input" name="city" id="city" placeholder="Enter your City">
+            <button class="search-btn">Search</button>
+        </div>
+
+        <div class="air-info">
+            <h2 class="sub-heading">Air Quality Index</h2>
+            <span class="air-quality">...</span>
+            <span class="arr">&nbsp;&rarr;&nbsp;</span>
+            <span class="air-quality-status">...</span>
+
+            <div class="component-val-map">
+
+                <div class="component-container">
+                    <h2 class="sub-heading">Concentration of pollution in air :</h2>
+    
+                    <div>
+                        <h3 class="component-names">Carbon Monoxide</h3>
+                        <span class="component-val" data-comp="co"></span>
+                    </div>
+
+                    <div>
+                        <h3 class="component-names">Fine particles</h3>
+                        <span class="component-val" data-comp="pm2_5"></span>
+                    </div>
+    
+                    <div>
+                        <h3 class="component-names">Coarse particle matter</h3>
+                        <span class="component-val" data-comp="pm10"></span>
+                    </div>
+                    
+                </div>
+
+                <div class="map-box">
+                    <div id="map">
+                    
+                    </div>
+                </div>
+
+
+                <div id="weatherdisplay">
+                    
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" "></script>
+    <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
